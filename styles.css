@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: default;
+}
+
+body:hover {
+    cursor: default;
+}
+
+#product-viewer {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+#info-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+#info-panel.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.info-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+    z-index: 1000;
+    font-size: 20px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transform: translateY(-10px);
+    transition: all 0.3s ease-out;
+    min-width: 200px;
+    text-align: center;
+}
+
+.info-content {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.info-panel.visible {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+} 
